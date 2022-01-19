@@ -3,24 +3,34 @@ const ironhacker = {
     age: 39,
     favoriteLanguage: 'JavaScript',
     isSatisfied: true,
-    'works at': 'Google',
+    worksAt: 'Google',
     isRemote: false
 }
 
 // 1: update favoriteLanguage to 'React' 
-// ... your code here
-
+ 
+ ironhacker.favoriteLanguage = "React"
+ console.log("Ironhacker", ironhacker)
+ 
 // 2: Update ironhacker's age to 29
-// ... your code here
+
+ironhacker.age = 29
+console.log("Ironhacker", ironhacker)
 
 // 3: Remove the 'isRemote' property
-// ... your code here
+
+delete ironhacker.isRemote // or delete ironhacker['isRemote']
+console.log("Ironhacker", ironhacker)
 
 // 4: Add a new property: 'didGraduate' and set it to a valid boolean value
-// ... your code here
+
+ironhacker.didGraduate = true
+console.log("Ironhacker", ironhacker)
 
 // 5: list all keys of the ironhacker object
-// ... your code here
+ for (const key in ironhacker){ //you can const the key, as it is a declaration
+     console.log(key)
+ }
 
-// 6: check if ironhacker has property 'works at'
-// ... your code here
+// 6: check if ironhacker has property 'worksAt'
+console.log(ironhacker.hasOwnProperty("worksAt"), !!ironhacker.worksAt)
